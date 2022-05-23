@@ -1,0 +1,113 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-image: url(https://live.staticflickr.com/3603/3398119430_a9e15b99e5_b.jpg);
+    background-size: cover;
+    background-repeat: none
+    ;
+}
+input, label ,img button{
+    display: block;
+    color: white;
+    font-size: 15px;
+}
+input, select{
+    width: 100%;
+    padding: 1rem;
+    background: transparent;
+    border: 1px solid blue;
+    outline-offset: 3px;
+    outline-color: aquamarine;
+    
+    font-weight: bold;
+    font-size: 15px;
+}
+input:hover  , select:hover, input:focus , select:focus{
+    border: 1px solid rgb(240, 9, 240);
+}
+
+.container{
+    border:2px dashed blue;
+    padding: 3rem;
+    background-color: rgba(223, 145, 51, 0.651);
+    display: flex;
+    gap: 3rem;
+    width: 90%;
+}
+#download{
+padding: 1rem;
+font-size: 1rem;
+font-weight: bold;
+color: blue;
+border: none;
+border-radius: 75px;
+}
+#download:hover{
+    transform: translate(5px, -5px);
+}
+
+
+
+
+.downloadBadge{
+    border-radius: 75px;
+    border: 2px solid rgb(236, 10, 236);
+    width: fit-content;
+}
+.inputBadge{
+    font-size: 30px  !important;
+    
+}
+.displayBadge{
+    flex-grow: 1.5;
+    position: relative;
+
+}
+.gradientBox{
+    padding: 5rem;
+}
+.inputBox{
+    border: 2px solid blue;
+    border-bottom: 0;
+    padding: 2rem;
+}
+
+#roleBadge{
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: violet;
+    color: blue;
+    width: fit-content;
+    border-radius: 75px;
+    margin-bottom: 1rem;
+}
+#nameBadge{
+    font-size: 4rem;
+    color: blue;
+}
+.photoBadge{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    border: 1px solid black,;
+    width: 250px;
+    height: 250px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAMFBMVEXFxcX////CwsLGxsb7+/vT09PJycn19fXq6urb29ve3t7w8PDOzs7n5+f5+fnt7e30nlkBAAAFHUlEQVR4nO2dC5qqMAyFMTwUBdz/bq+VYYrKKJCkOfXmXwHna5uTpA+KwnEcx3Ecx3Ecx3Ecx3Ecx3Ecx3Ecx3Ecx3EcA2iO9cdIc5PUdO257y+BU39u66b4HplE3fk6VIcnqmNfl1+gksr6+iIucjl3WYukor7+re6Hoe1y1UhNO3zUd+fUFRmKpOa0Tt6dY5ubRCrOG/QFLk1WGmnt/JxzykcjdZ/jyxJDLlOV2l36AtcsJJb9boG3YcR3DuqODIE3ztYKPkDdmwRmpUToUaSaq++AvRgZMWbOpbQW8hdCAm8ZDugoikzREdCJ2okJPBx6azFLNOwoOgcxojJ98JkaTSJxMpklKrCAKhZGI0drTY/wU5lXoJYibannV9NYy4oozNEAkPHTjop+DTDxVGkIgYJNoyQQJtiIW+EMjGAjm649AjGIaqswcEFQKJ2QPlJbqytki6ZXAAZRJ52J2McaUowzAfs+uFzrYhnzaapphiPWdaJWShqxjqa6kTTQ205TVbsfMa6htL0iYOsXpJrQjHSmCkv1QGPtiHqlYcQ21Gj7fcDU8xOEUuNgSltPzexh+HqFlanCBHZ4OLhCV+gK/3OF6vWvucLv98MUOY2pwu/PS/+D2qJU7pYGbOvDFDW+bbON9p3o3oRxn0bfLgZTgSn6pSfrtr56qLHemtHPTK2319SzGvtjQ9qeb39WgS66Cm073nd0U1PzDdJCO3Gzn6TKpl9Zq7ujGWsQhlA3NwWIMwG9zM08Y/tBrR9VWeczv5CSQuuUNKIUTk23ZJ5RKfVhjnkXotfWIlgX2BSCDYbZR+QTcLhb3dKZDUY2M0d4KWItwhHRah/zsrOgKw4wycwjcgEVcgQDQo23CqSiWEJkFAfod2oE1uIFdA1OsCPqFXYNTjCfb8Ez+iX2x5sKLlVbhtqdDcar9ZevhnbZxoBUD35k23t0d304LYs1ELVbnfFaZ/REJJX9niP8Q19moZGo3m8XR/yBvOnjFfsXcI2c8ZuNo7WMP5HQh6yRGrlmFOJTnyTcT+zRlqPUBI2gTVWNUzUna1ERgecgF4GpNBQ38jGqxVLzQA1A31Rrhk6Yz9QEh/WND0GnuG9huhiTXJkxfAizTHLr6cbJKN6UCU6x/2DTRE1xEeEXi3O0ZUqBN4nJRzHhFB1JPlFTBZlI2kQ8zc3KJ1Le8DIRmFJiknuVS6RK4Ej/JtBfJErDSzOBiY4wJHX6Z1I4v1GUmdCPNirnLLeg3oJLcbX5PcpHNbRvOa1A956QmRPOUXVF+zkaUJynpkYR0bOMJH2nNej1pqyV/aKkz9jr5yj5vrXXz1F5SQLACiMapmierj2ikLyleKdlA/I/2oFxiglxx9B+mHwz0lf34IZQfhDRhlD6bhvgEAoPYooHkTczSIZTLC+cEExsoNKZiGBiY9cCfo/Y/SjIOBMQizWWTe73CMUasJx7jlD+DdKdWUKoY4PRYFtGpO0G1Lx4RaadgTtJhf4fiGqGIwKWCGuGIwKWqP+7IxYCzygjR9IAO5pC7Da9g70TBVpWRNgFBlgT8RV2WxHbKwJMv4BOaEaYaU2K16yZMN/qgV+G7IWIvwyZCxHeDQMsR8wg0DBDDXB5H2EV+hkEGmaoySHQsEJNFoGGFWrAq98JRhUMX1iMMMqLLEIpK5jCbd4vw9nSt/72lewXiN6jmdjfq8Hdknlk92ZwJnbIMMRM7JBhiFlUFoHd1UWaP1QKsPsHA5mkNB+Smn9JqV3wskatnQAAAABJRU5ErkJggg==);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.footerBadgeBox{
+
+}
